@@ -17,6 +17,8 @@ def scrapeUrl(url, selector):
         keep = int(input('Which do you want to keep? '))
         return element[keep].text.replace("\\r\\n", " ")
     else:
+        if len(element) == 0:
+            return ""
         return element[0].text.replace("\r\n", " ")
 
 
